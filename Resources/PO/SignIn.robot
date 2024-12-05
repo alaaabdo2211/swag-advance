@@ -1,12 +1,15 @@
 *** Settings ***
 
 Library    SeleniumLibrary
+Library    ../../Libraries/MyCustomeLibrary.py
+Resource             ../../Data/InputData.robot
+
 
 *** Variables ***
-${LOGIN_HEADER_LABEL} =     Swag Labs
-${SIGNIN_USERNAME_TEXTBOX} =    id=user-name
-${SIGNIN_PASSWORD_TEXTBOX} =    id=password
-${SIGNIN_BUTTON} =       id=login-button
+${SIGN_IN_EMAIL} =          id=user-name
+${SIGN_IN_PASSWORD} =       id=password
+
+
 
 *** Keywords ***
 Verify Page Loaded
@@ -14,12 +17,26 @@ Verify Page Loaded
 
 
 Login With Valid Credentials
-      [Arguments]    ${USERNAME}    ${PASSWORD}
-      Fill Username Field       ${USERNAME}
-      Fill Password Field    ${PASSWORD}
+      [Arguments]    ${UserData}
+      Fill Username Field       ${UserData.Username}
+      Fill Password Field    ${UserData.Password}
       Click "Login" Button
 
+Enter Credentials
+    [Arguments]  ${Credentials}
+    run keyword unless  '${Credentials[0]}' == '#BLANK'  Input Text  ${SIGN_IN_EMAIL}  ${Credentials[0]}
+    run keyword unless  '${Credentials[1]}' == '#BLANK'  Input Text  ${SIGN_IN_PASSWORD}  ${Credentials[1]}
 
+
+Login With Invalid Credentials
+      [Arguments]    ${UserData}
+      Fill Username Field       ${UserData.Username}
+      Fill Password Field    abc
+      Click "Login" Button
+
+Verify Error Message
+    [Arguments]  ${ExpectedErrorMessage}
+    [Return]  ${ExpectedErrorMessage[2]}
 
 Fill Username Field
     [Arguments]    ${USERNAME}
@@ -31,3 +48,6 @@ Fill Password Field
 
 Click "Login" Button
     Click Button    ${SIGNIN_BUTTON}
+
+Do Some Custom Thing
+        Do Something Special

@@ -1,462 +1,1105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-17T00:59:57.748267" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-05T15:55:46.113753" rpa="false" schemaversion="5">
 <suite id="s1" name="Swag" source="d:\development1\robot-scripts\swag-advance\Tests\Swag.robot">
-<test id="s1-t1" name="Should be abel to sign in" line="20">
+<test id="s1-t1" name="Should see corret error messages with invalid logins" line="19">
 <kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-17T00:59:58.087131" elapsed="0.000512"/>
+<status status="PASS" start="2024-12-05T15:55:46.876587" elapsed="0.001586"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-17T00:59:58.088192" level="INFO">Starting the test case</msg>
-<arg>Starting the test case</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-17T00:59:58.087972" elapsed="0.003803"/>
+<kw name="Set Log Level" owner="BuiltIn">
+<msg time="2024-12-05T15:55:46.879277" level="DEBUG">Log level changed from INFO to DEBUG.</msg>
+<arg>Debug</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:55:46.878718" elapsed="0.004350"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-17T00:59:58.093993" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
-<msg time="2024-11-17T00:59:58.607459" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:55:46.884314" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-05T15:55:46.887058" level="DEBUG">Selenium Manager binary found at: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-12-05T15:55:46.887381" level="DEBUG">Executing process: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json</msg>
+<msg time="2024-12-05T15:55:49.700183" level="DEBUG">Sending stats to Plausible: Props { browser: "chrome", browser_version: "", os: "windows", arch: "amd64", lang: "python", selenium_version: "4.27" }</msg>
+<msg time="2024-12-05T15:55:49.700503" level="DEBUG">Found chromedriver 130.0.6723.69 in PATH: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:55:49.700726" level="DEBUG">chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:55:49.700930" level="DEBUG">Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value</msg>
+<msg time="2024-12-05T15:55:49.701137" level="DEBUG">Output: "\r\r\n\r\r\nVersion=131.0.6778.86\r\r\n\r\r\n\r\r\n\r"</msg>
+<msg time="2024-12-05T15:55:49.701316" level="DEBUG">Detected browser: chrome 131.0.6778.86</msg>
+<msg time="2024-12-05T15:55:49.701515" level="DEBUG">Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json</msg>
+<msg time="2024-12-05T15:55:49.701702" level="DEBUG">Required driver: chromedriver 131.0.6778.87</msg>
+<msg time="2024-12-05T15:55:49.701863" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:55:49.703798" level="DEBUG">Driver path: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:55:49.704183" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:55:49.712465" level="DEBUG">Started executable: `C:\bin\chromedriver.exe` in a child process with pid: 5860 using 0 to output -3</msg>
+<msg time="2024-12-05T15:55:50.232168" level="DEBUG">POST http://localhost:56001/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2024-12-05T15:55:50.233026" level="DEBUG">Starting new HTTP connection (1): localhost:56001</msg>
+<msg time="2024-12-05T15:55:51.808014" level="DEBUG">http://localhost:56001 "POST /session HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:55:51.808505" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"131.0.6778.86","chrome":{"chromedriverVersion":"130.0.6723.69 (3ec172b971b9478c515a58f591112c5c23fa4965-refs/branch-heads/6723@{#1452})","userDataDir":"C:\\Users\\abdoa\\AppData\\Local\\Temp\\scoped_dir5860_457272368"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:56008"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"67371e887ee7d50e3a2eaefb1ad1ca99"}} | headers=HTTPHeaderDict({'Content-Length': '880', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:55:51.809186" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:55:51.810358" level="DEBUG">POST http://localhost:56001/session/67371e887ee7d50e3a2eaefb1ad1ca99/timeouts {'script': 10000}</msg>
+<msg time="2024-12-05T15:55:51.814095" level="DEBUG">http://localhost:56001 "POST /session/67371e887ee7d50e3a2eaefb1ad1ca99/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:55:51.814555" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:55:51.815142" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:55:51.816757" level="DEBUG">POST http://localhost:56001/session/67371e887ee7d50e3a2eaefb1ad1ca99/timeouts {'implicit': 0}</msg>
+<msg time="2024-12-05T15:55:51.820104" level="DEBUG">http://localhost:56001 "POST /session/67371e887ee7d50e3a2eaefb1ad1ca99/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:55:51.820715" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:55:51.821685" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:55:51.822402" level="DEBUG">POST http://localhost:56001/session/67371e887ee7d50e3a2eaefb1ad1ca99/timeouts {'pageLoad': 300000}</msg>
+<msg time="2024-12-05T15:55:51.830843" level="DEBUG">http://localhost:56001 "POST /session/67371e887ee7d50e3a2eaefb1ad1ca99/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:55:51.831307" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:55:51.831672" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:55:51.832115" level="DEBUG">POST http://localhost:56001/session/67371e887ee7d50e3a2eaefb1ad1ca99/url {'url': 'https://www.saucedemo.com'}</msg>
+<msg time="2024-12-05T15:55:52.419814" level="DEBUG">http://localhost:56001 "POST /session/67371e887ee7d50e3a2eaefb1ad1ca99/url HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:55:52.420275" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:55:52.420628" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:55:52.421030" level="DEBUG">Opened browser with session id 67371e887ee7d50e3a2eaefb1ad1ca99.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-17T00:59:58.092528" elapsed="2.759332"/>
+<status status="PASS" start="2024-12-05T15:55:46.883621" elapsed="5.537709"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:55:52.423691" level="DEBUG">POST http://localhost:56001/session/67371e887ee7d50e3a2eaefb1ad1ca99/window/rect {'x': None, 'y': None, 'width': 1935, 'height': 1090}</msg>
+<msg time="2024-12-05T15:55:53.618342" level="DEBUG">http://localhost:56001 "POST /session/67371e887ee7d50e3a2eaefb1ad1ca99/window/rect HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:55:53.618844" level="DEBUG">Remote response: status=200 | data={"value":{"height":883,"width":1555,"x":8,"y":8}} | headers=HTTPHeaderDict({'Content-Length': '49', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:55:53.619216" level="DEBUG">Finished Request</msg>
 <arg>width=1935</arg>
 <arg>height=1090</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2024-11-17T01:00:00.852195" elapsed="0.357413"/>
+<status status="PASS" start="2024-12-05T15:55:52.421977" elapsed="1.197585"/>
 </kw>
-<status status="PASS" start="2024-11-17T00:59:58.085791" elapsed="3.124437"/>
+<kw name="Set Log Level" owner="BuiltIn">
+<arg>info</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:55:53.620207" elapsed="0.000896"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:55:46.874908" elapsed="6.746662"/>
+</kw>
+<kw name="Get CSV Data" owner="DataManager">
+<kw name="Read Csv File" owner="Csv">
+<msg time="2024-12-05T15:55:53.643482" level="INFO">${Data} = [['admin@robotframeworktutorial.com', 'secret_sauce', 'Epic sadface: Username and password do not match any user in this service'], ['locked_out_user', 'TestPassword!', 'Epic sadface: Username and pas...</msg>
+<var>${Data}</var>
+<arg>${FilePath}</arg>
+<status status="PASS" start="2024-12-05T15:55:53.624465" elapsed="0.020146"/>
+</kw>
+<return>
+<value>${Data}</value>
+<status status="PASS" start="2024-12-05T15:55:53.645059" elapsed="0.000384"/>
+</return>
+<msg time="2024-12-05T15:55:53.645997" level="INFO">${InvalidLoginScenarios} = [['admin@robotframeworktutorial.com', 'secret_sauce', 'Epic sadface: Username and password do not match any user in this service'], ['locked_out_user', 'TestPassword!', 'Epic sadface: Username and pas...</msg>
+<var>${InvalidLoginScenarios}</var>
+<arg>${INVALID_CREDENTIALS_PATH_CSV}</arg>
+<status status="PASS" start="2024-12-05T15:55:53.623246" elapsed="0.023793"/>
+</kw>
+<kw name="Login with Many Invalid Credentials" owner="SwagApp">
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify Page Loaded" owner="SignIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_HEADER_LABEL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-05T15:55:53.653036" elapsed="0.059897"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:55:53.652036" elapsed="0.061391"/>
+</kw>
+<arg>SignIn.Verify Page Loaded</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-05T15:55:53.651103" elapsed="0.062678"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Attempt Login" owner="SwagApp">
+<kw name="Enter Credentials" owner="SignIn">
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-12-05T15:55:53.717973" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:55:53.849273" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'id=user-name'.</msg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-05T15:55:53.845397" elapsed="0.359843"/>
+</kw>
+<arg>'${Credentials[0]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-12-05T15:55:53.717588" elapsed="0.488165"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-12-05T15:55:54.206894" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:55:54.212397" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-05T15:55:54.210331" elapsed="0.177611"/>
+</kw>
+<arg>'${Credentials[1]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-12-05T15:55:54.206490" elapsed="0.181891"/>
+</kw>
+<arg>${Credentials}</arg>
+<status status="PASS" start="2024-12-05T15:55:53.716503" elapsed="0.672360"/>
+</kw>
+<kw name="Click &quot;Login&quot; Button" owner="SignIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:55:54.391374" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${SIGNIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-05T15:55:54.390550" elapsed="0.117231"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:55:54.389503" elapsed="0.118719"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-05T15:55:55.509482" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-05T15:55:54.508699" elapsed="1.001139"/>
+</kw>
+<arg>${LoginScenario}</arg>
+<status status="PASS" start="2024-12-05T15:55:53.715320" elapsed="1.794793"/>
+</kw>
+<arg>Attempt Login</arg>
+<arg>${LoginScenario}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-05T15:55:53.714390" elapsed="1.795950"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify Login Page Error Message" owner="SwagApp">
+<kw name="Verify Error Message" owner="SignIn">
+<return>
+<value>${ExpectedErrorMessage[2]}</value>
+<status status="PASS" start="2024-12-05T15:55:55.512700" elapsed="0.000212"/>
+</return>
+<arg>${ExpectedErrorMessage}</arg>
+<status status="PASS" start="2024-12-05T15:55:55.512113" elapsed="0.002175"/>
+</kw>
+<arg>${LoginScenario}</arg>
+<status status="PASS" start="2024-12-05T15:55:55.511294" elapsed="0.003267"/>
+</kw>
+<arg>Verify Login Page Error Message</arg>
+<arg>${LoginScenario}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-05T15:55:55.510737" elapsed="0.004055"/>
+</kw>
+<var name="${LoginScenario}">['admin@robotframeworktutorial.com', 'secret_sauce', 'Epic sadface: Username and password do not match any user in this service']</var>
+<status status="PASS" start="2024-12-05T15:55:53.650429" elapsed="1.864553"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify Page Loaded" owner="SignIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_HEADER_LABEL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-05T15:55:55.517245" elapsed="0.015210"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:55:55.516577" elapsed="0.016131"/>
+</kw>
+<arg>SignIn.Verify Page Loaded</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-05T15:55:55.515977" elapsed="0.016894"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Attempt Login" owner="SwagApp">
+<kw name="Enter Credentials" owner="SignIn">
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-12-05T15:55:55.534709" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:55:55.539163" level="INFO">Typing text 'locked_out_user' into text field 'id=user-name'.</msg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-05T15:55:55.537101" elapsed="0.156364"/>
+</kw>
+<arg>'${Credentials[0]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-12-05T15:55:55.534560" elapsed="0.159142"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-12-05T15:55:55.694140" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:55:55.698088" level="INFO">Typing text 'TestPassword!' into text field 'id=password'.</msg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-05T15:55:55.696623" elapsed="0.139506"/>
+</kw>
+<arg>'${Credentials[1]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-12-05T15:55:55.693988" elapsed="0.142381"/>
+</kw>
+<arg>${Credentials}</arg>
+<status status="PASS" start="2024-12-05T15:55:55.534093" elapsed="0.302459"/>
+</kw>
+<kw name="Click &quot;Login&quot; Button" owner="SignIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:55:55.837623" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${SIGNIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-05T15:55:55.837298" elapsed="0.066758"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:55:55.836847" elapsed="0.067573"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-05T15:55:56.905890" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-05T15:55:55.904933" elapsed="1.001255"/>
+</kw>
+<arg>${LoginScenario}</arg>
+<status status="PASS" start="2024-12-05T15:55:55.533546" elapsed="1.372985"/>
+</kw>
+<arg>Attempt Login</arg>
+<arg>${LoginScenario}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-05T15:55:55.533151" elapsed="1.373818"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify Login Page Error Message" owner="SwagApp">
+<kw name="Verify Error Message" owner="SignIn">
+<return>
+<value>${ExpectedErrorMessage[2]}</value>
+<status status="PASS" start="2024-12-05T15:55:56.909733" elapsed="0.000159"/>
+</return>
+<arg>${ExpectedErrorMessage}</arg>
+<status status="PASS" start="2024-12-05T15:55:56.909306" elapsed="0.001460"/>
+</kw>
+<arg>${LoginScenario}</arg>
+<status status="PASS" start="2024-12-05T15:55:56.908415" elapsed="0.002560"/>
+</kw>
+<arg>Verify Login Page Error Message</arg>
+<arg>${LoginScenario}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-05T15:55:56.907752" elapsed="0.003384"/>
+</kw>
+<var name="${LoginScenario}">['locked_out_user', 'TestPassword!', 'Epic sadface: Username and password do not match any user in this service']</var>
+<status status="PASS" start="2024-12-05T15:55:55.515405" elapsed="1.395853"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify Page Loaded" owner="SignIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_HEADER_LABEL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-05T15:55:56.912757" elapsed="0.015192"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:55:56.912288" elapsed="0.016118"/>
+</kw>
+<arg>SignIn.Verify Page Loaded</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-05T15:55:56.911874" elapsed="0.016857"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Attempt Login" owner="SwagApp">
+<kw name="Enter Credentials" owner="SignIn">
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-12-05T15:55:56.931989" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<arg>'${Credentials[0]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-12-05T15:55:56.931748" elapsed="0.002893"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-12-05T15:55:56.935456" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<arg>'${Credentials[1]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-12-05T15:55:56.935187" elapsed="0.004655"/>
+</kw>
+<arg>${Credentials}</arg>
+<status status="PASS" start="2024-12-05T15:55:56.930899" elapsed="0.010066"/>
+</kw>
+<kw name="Click &quot;Login&quot; Button" owner="SignIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:55:56.942677" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${SIGNIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-05T15:55:56.942140" elapsed="0.081113"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:55:56.941436" elapsed="0.082634"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-05T15:55:58.025065" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-05T15:55:57.024491" elapsed="1.000923"/>
+</kw>
+<arg>${LoginScenario}</arg>
+<status status="PASS" start="2024-12-05T15:55:56.929908" elapsed="1.095772"/>
+</kw>
+<arg>Attempt Login</arg>
+<arg>${LoginScenario}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-05T15:55:56.929220" elapsed="1.096673"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify Login Page Error Message" owner="SwagApp">
+<kw name="Verify Error Message" owner="SignIn">
+<return>
+<value>${ExpectedErrorMessage[2]}</value>
+<status status="PASS" start="2024-12-05T15:55:58.028068" elapsed="0.000189"/>
+</return>
+<arg>${ExpectedErrorMessage}</arg>
+<status status="PASS" start="2024-12-05T15:55:58.027541" elapsed="0.001900"/>
+</kw>
+<arg>${LoginScenario}</arg>
+<status status="PASS" start="2024-12-05T15:55:58.026796" elapsed="0.002995"/>
+</kw>
+<arg>Verify Login Page Error Message</arg>
+<arg>${LoginScenario}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-12-05T15:55:58.026267" elapsed="0.003757"/>
+</kw>
+<var name="${LoginScenario}">['#BLANK', '#BLANK', 'Epic sadface: Username and password do not match any user in this service']</var>
+<status status="PASS" start="2024-12-05T15:55:56.911572" elapsed="1.118644"/>
+</iter>
+<var>${LoginScenario}</var>
+<value>@{InvalidLoginScenarios}</value>
+<status status="PASS" start="2024-12-05T15:55:53.649558" elapsed="4.380943"/>
+</for>
+<arg>${InvalidLoginScenarios}</arg>
+<status status="PASS" start="2024-12-05T15:55:53.648430" elapsed="4.382491"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-12-05T15:55:58.033090" elapsed="2.304418"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:55:58.031995" elapsed="2.306011"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:55:46.873143" elapsed="13.466323"/>
+</test>
+<test id="s1-t2" name="Should be abel to sign in" line="23">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-12-05T15:56:00.343575" elapsed="0.000618"/>
+</kw>
+<kw name="Set Log Level" owner="BuiltIn">
+<msg time="2024-12-05T15:56:00.345279" level="DEBUG">Log level changed from INFO to DEBUG.</msg>
+<arg>Debug</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:56:00.344693" elapsed="0.000858"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:56:00.346752" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-05T15:56:00.348457" level="DEBUG">Selenium Manager binary found at: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-12-05T15:56:00.348821" level="DEBUG">Executing process: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json</msg>
+<msg time="2024-12-05T15:56:01.242953" level="DEBUG">Found chromedriver 130.0.6723.69 in PATH: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:56:01.243266" level="DEBUG">chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:56:01.243494" level="DEBUG">Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value</msg>
+<msg time="2024-12-05T15:56:01.243691" level="DEBUG">Output: "\r\r\n\r\r\nVersion=131.0.6778.86\r\r\n\r\r\n\r\r\n\r"</msg>
+<msg time="2024-12-05T15:56:01.243865" level="DEBUG">Detected browser: chrome 131.0.6778.86</msg>
+<msg time="2024-12-05T15:56:01.244053" level="DEBUG">Required driver: chromedriver 131.0.6778.87</msg>
+<msg time="2024-12-05T15:56:01.244235" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:56:01.245926" level="DEBUG">Driver path: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:56:01.246329" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:56:01.259488" level="DEBUG">Started executable: `C:\bin\chromedriver.exe` in a child process with pid: 38468 using 0 to output -3</msg>
+<msg time="2024-12-05T15:56:01.837422" level="DEBUG">POST http://localhost:56039/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2024-12-05T15:56:01.839149" level="DEBUG">Starting new HTTP connection (1): localhost:56039</msg>
+<msg time="2024-12-05T15:56:07.764470" level="DEBUG">http://localhost:56039 "POST /session HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:07.765006" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"131.0.6778.86","chrome":{"chromedriverVersion":"130.0.6723.69 (3ec172b971b9478c515a58f591112c5c23fa4965-refs/branch-heads/6723@{#1452})","userDataDir":"C:\\Users\\abdoa\\AppData\\Local\\Temp\\scoped_dir38468_1579494778"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:56048"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"31eb49ad95cd24989a813e18459ea743"}} | headers=HTTPHeaderDict({'Content-Length': '882', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:07.765388" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:07.765874" level="DEBUG">POST http://localhost:56039/session/31eb49ad95cd24989a813e18459ea743/timeouts {'script': 10000}</msg>
+<msg time="2024-12-05T15:56:07.778221" level="DEBUG">http://localhost:56039 "POST /session/31eb49ad95cd24989a813e18459ea743/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:07.778679" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:07.779024" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:07.779402" level="DEBUG">POST http://localhost:56039/session/31eb49ad95cd24989a813e18459ea743/timeouts {'implicit': 0}</msg>
+<msg time="2024-12-05T15:56:07.784892" level="DEBUG">http://localhost:56039 "POST /session/31eb49ad95cd24989a813e18459ea743/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:07.785389" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:07.786050" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:07.787246" level="DEBUG">POST http://localhost:56039/session/31eb49ad95cd24989a813e18459ea743/timeouts {'pageLoad': 300000}</msg>
+<msg time="2024-12-05T15:56:07.795482" level="DEBUG">http://localhost:56039 "POST /session/31eb49ad95cd24989a813e18459ea743/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:07.795929" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:07.796246" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:07.797070" level="DEBUG">POST http://localhost:56039/session/31eb49ad95cd24989a813e18459ea743/url {'url': 'https://www.saucedemo.com'}</msg>
+<msg time="2024-12-05T15:56:09.344228" level="DEBUG">http://localhost:56039 "POST /session/31eb49ad95cd24989a813e18459ea743/url HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:09.344882" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:09.345256" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:09.346266" level="DEBUG">Opened browser with session id 31eb49ad95cd24989a813e18459ea743.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-05T15:56:00.346102" elapsed="9.000535"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:56:09.347833" level="DEBUG">POST http://localhost:56039/session/31eb49ad95cd24989a813e18459ea743/window/rect {'x': None, 'y': None, 'width': 1935, 'height': 1090}</msg>
+<msg time="2024-12-05T15:56:09.746749" level="DEBUG">http://localhost:56039 "POST /session/31eb49ad95cd24989a813e18459ea743/window/rect HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:09.747180" level="DEBUG">Remote response: status=200 | data={"value":{"height":883,"width":1555,"x":8,"y":8}} | headers=HTTPHeaderDict({'Content-Length': '49', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:09.747507" level="DEBUG">Finished Request</msg>
+<arg>width=1935</arg>
+<arg>height=1090</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-12-05T15:56:09.347137" elapsed="0.400699"/>
+</kw>
+<kw name="Set Log Level" owner="BuiltIn">
+<arg>info</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:56:09.748735" elapsed="0.000904"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:56:00.342787" elapsed="9.407290"/>
 </kw>
 <kw name="Login With Valid Credentials" owner="SwagApp">
 <kw name="Verify Page Loaded" owner="SignIn">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:01.214249" elapsed="0.030745"/>
+<status status="PASS" start="2024-12-05T15:56:09.753686" elapsed="0.029451"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:01.213341" elapsed="0.032027"/>
+<status status="PASS" start="2024-12-05T15:56:09.752556" elapsed="0.031091"/>
 </kw>
 <kw name="Login With Valid Credentials" owner="SignIn">
 <kw name="Fill Username Field" owner="SignIn">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:01.248015" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2024-12-05T15:56:09.789193" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>${SIGNIN_USERNAME_TEXTBOX}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:01.247146" elapsed="0.155549"/>
+<status status="PASS" start="2024-12-05T15:56:09.788275" elapsed="0.226771"/>
 </kw>
-<arg>${USERNAME}</arg>
-<status status="PASS" start="2024-11-17T01:00:01.246527" elapsed="0.156433"/>
+<arg>${UserData.Username}</arg>
+<status status="PASS" start="2024-12-05T15:56:09.785571" elapsed="0.229820"/>
 </kw>
 <kw name="Fill Password Field" owner="SignIn">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:01.404161" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2024-12-05T15:56:10.019446" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
 <arg>${SIGNIN_PASSWORD_TEXTBOX}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:01.403709" elapsed="0.098125"/>
+<status status="PASS" start="2024-12-05T15:56:10.017987" elapsed="0.142349"/>
 </kw>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-17T01:00:01.403260" elapsed="0.098790"/>
+<arg>${UserData.Password}</arg>
+<status status="PASS" start="2024-12-05T15:56:10.015858" elapsed="0.144800"/>
 </kw>
 <kw name="Click &quot;Login&quot; Button" owner="SignIn">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:01.502875" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2024-12-05T15:56:10.161885" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>${SIGNIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:01.502613" elapsed="0.091679"/>
+<status status="PASS" start="2024-12-05T15:56:10.161502" elapsed="0.196567"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:01.502284" elapsed="0.092359"/>
+<status status="PASS" start="2024-12-05T15:56:10.160997" elapsed="0.197462"/>
 </kw>
-<arg>${EMAIL}</arg>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-17T01:00:01.245784" elapsed="0.349097"/>
+<arg>${UserData}</arg>
+<status status="PASS" start="2024-12-05T15:56:09.784285" elapsed="0.574441"/>
+</kw>
+<kw name="Do Some Custom Thing" owner="SignIn">
+<kw name="Do Something Special" owner="MyCustomeLibrary">
+<msg time="2024-12-05T15:56:10.360483" level="INFO">Do Something Special</msg>
+<status status="PASS" start="2024-12-05T15:56:10.360001" elapsed="0.000962"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:56:10.359225" elapsed="0.002033"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Products">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${PRODUCTS_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:01.595899" elapsed="0.019993"/>
+<status status="PASS" start="2024-12-05T15:56:10.362680" elapsed="0.032862"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:01.595294" elapsed="0.020943"/>
+<status status="PASS" start="2024-12-05T15:56:10.361629" elapsed="0.034342"/>
 </kw>
-<arg>${VALID_LOGIN_USERNAME}</arg>
-<arg>${VALID_LOGIN_PASSWORD}</arg>
-<status status="PASS" start="2024-11-17T01:00:01.211563" elapsed="0.404896"/>
+<return>
+<value>Logged in!</value>
+<status status="PASS" start="2024-12-05T15:56:10.396249" elapsed="0.000205"/>
+</return>
+<msg time="2024-12-05T15:56:10.396793" level="INFO">${ReturnedInfo} = Logged in!</msg>
+<var>${ReturnedInfo}</var>
+<arg>${ADMIN_USER}</arg>
+<status status="PASS" start="2024-12-05T15:56:09.751231" elapsed="0.645848"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-05T15:56:10.398531" level="INFO">Logged in!</msg>
+<arg>${ReturnedInfo}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-05T15:56:10.397890" elapsed="0.001028"/>
 </kw>
 <kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-17T01:00:01.617919" elapsed="6.368774"/>
+<status status="PASS" start="2024-12-05T15:56:10.402641" elapsed="3.282680"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:01.617283" elapsed="6.369867"/>
+<status status="PASS" start="2024-12-05T15:56:10.401484" elapsed="3.284311"/>
 </kw>
 <doc>Test the login</doc>
 <tag>1002</tag>
 <tag>Login</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2024-11-17T00:59:58.084367" elapsed="9.903682"/>
+<status status="PASS" start="2024-12-05T15:56:00.341482" elapsed="13.345223"/>
 </test>
-<test id="s1-t2" name="Should be abel to add new Customer" line="25">
+<test id="s1-t3" name="Invalid login scenarios should display correct error messages" line="29">
 <kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-17T01:00:07.993613" elapsed="0.000623"/>
+<status status="PASS" start="2024-12-05T15:56:13.690331" elapsed="0.000596"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-17T01:00:07.995097" level="INFO">Starting the test case</msg>
-<arg>Starting the test case</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-17T01:00:07.994696" elapsed="0.000718"/>
+<kw name="Set Log Level" owner="BuiltIn">
+<msg time="2024-12-05T15:56:13.691877" level="DEBUG">Log level changed from INFO to DEBUG.</msg>
+<arg>Debug</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:56:13.691370" elapsed="0.000737"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:07.996490" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
-<msg time="2024-11-17T01:00:08.460722" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:56:13.693148" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-05T15:56:13.694884" level="DEBUG">Selenium Manager binary found at: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-12-05T15:56:13.695232" level="DEBUG">Executing process: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json</msg>
+<msg time="2024-12-05T15:56:14.442970" level="DEBUG">Found chromedriver 130.0.6723.69 in PATH: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:56:14.443259" level="DEBUG">chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:56:14.443430" level="DEBUG">Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value</msg>
+<msg time="2024-12-05T15:56:14.443601" level="DEBUG">Output: "\r\r\n\r\r\nVersion=131.0.6778.86\r\r\n\r\r\n\r\r\n\r"</msg>
+<msg time="2024-12-05T15:56:14.443751" level="DEBUG">Detected browser: chrome 131.0.6778.86</msg>
+<msg time="2024-12-05T15:56:14.443899" level="DEBUG">Required driver: chromedriver 131.0.6778.87</msg>
+<msg time="2024-12-05T15:56:14.444049" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:56:14.445837" level="DEBUG">Driver path: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:56:14.446440" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:56:14.458424" level="DEBUG">Started executable: `C:\bin\chromedriver.exe` in a child process with pid: 13920 using 0 to output -3</msg>
+<msg time="2024-12-05T15:56:14.966841" level="DEBUG">POST http://localhost:56078/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2024-12-05T15:56:14.967435" level="DEBUG">Starting new HTTP connection (1): localhost:56078</msg>
+<msg time="2024-12-05T15:56:16.777364" level="DEBUG">http://localhost:56078 "POST /session HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:16.777877" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"131.0.6778.86","chrome":{"chromedriverVersion":"130.0.6723.69 (3ec172b971b9478c515a58f591112c5c23fa4965-refs/branch-heads/6723@{#1452})","userDataDir":"C:\\Users\\abdoa\\AppData\\Local\\Temp\\scoped_dir13920_1687475902"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:56085"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"01fe958578c28eca90b913fd8b3e0f44"}} | headers=HTTPHeaderDict({'Content-Length': '882', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:16.778559" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:16.779055" level="DEBUG">POST http://localhost:56078/session/01fe958578c28eca90b913fd8b3e0f44/timeouts {'script': 10000}</msg>
+<msg time="2024-12-05T15:56:16.800625" level="DEBUG">http://localhost:56078 "POST /session/01fe958578c28eca90b913fd8b3e0f44/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:16.801326" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:16.801770" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:16.802175" level="DEBUG">POST http://localhost:56078/session/01fe958578c28eca90b913fd8b3e0f44/timeouts {'implicit': 0}</msg>
+<msg time="2024-12-05T15:56:16.810409" level="DEBUG">http://localhost:56078 "POST /session/01fe958578c28eca90b913fd8b3e0f44/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:16.810913" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:16.811295" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:16.811715" level="DEBUG">POST http://localhost:56078/session/01fe958578c28eca90b913fd8b3e0f44/timeouts {'pageLoad': 300000}</msg>
+<msg time="2024-12-05T15:56:16.820392" level="DEBUG">http://localhost:56078 "POST /session/01fe958578c28eca90b913fd8b3e0f44/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:16.820877" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:16.821301" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:16.822110" level="DEBUG">POST http://localhost:56078/session/01fe958578c28eca90b913fd8b3e0f44/url {'url': 'https://www.saucedemo.com'}</msg>
+<msg time="2024-12-05T15:56:18.045995" level="DEBUG">http://localhost:56078 "POST /session/01fe958578c28eca90b913fd8b3e0f44/url HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:18.046480" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:18.046865" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:18.047144" level="DEBUG">Opened browser with session id 01fe958578c28eca90b913fd8b3e0f44.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-17T01:00:07.995887" elapsed="2.516850"/>
+<status status="PASS" start="2024-12-05T15:56:13.692565" elapsed="4.354882"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:56:18.048906" level="DEBUG">POST http://localhost:56078/session/01fe958578c28eca90b913fd8b3e0f44/window/rect {'x': None, 'y': None, 'width': 1935, 'height': 1090}</msg>
+<msg time="2024-12-05T15:56:18.487482" level="DEBUG">http://localhost:56078 "POST /session/01fe958578c28eca90b913fd8b3e0f44/window/rect HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:18.487942" level="DEBUG">Remote response: status=200 | data={"value":{"height":883,"width":1555,"x":8,"y":8}} | headers=HTTPHeaderDict({'Content-Length': '49', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:18.488293" level="DEBUG">Finished Request</msg>
 <arg>width=1935</arg>
 <arg>height=1090</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2024-11-17T01:00:10.513140" elapsed="0.356146"/>
+<status status="PASS" start="2024-12-05T15:56:18.048073" elapsed="0.440545"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:07.992795" elapsed="2.877037"/>
+<kw name="Set Log Level" owner="BuiltIn">
+<arg>info</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:56:18.489205" elapsed="0.000794"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:56:13.689527" elapsed="4.800864"/>
+</kw>
+<kw name="Test Multiple Invalid Login Scenarios">
+<msg time="2024-12-05T15:56:18.520438" level="FAIL">No keyword with name 'Test Multiple Invalid Login Scenarios' found.</msg>
+<arg>${UNREGISTERED_USER}</arg>
+<status status="FAIL" start="2024-12-05T15:56:18.520007" elapsed="0.002206">No keyword with name 'Test Multiple Invalid Login Scenarios' found.</status>
+</kw>
+<kw name="Test Multiple Invalid Login Scenarios">
+<msg time="2024-12-05T15:56:18.535122" level="FAIL">No keyword with name 'Test Multiple Invalid Login Scenarios' found.</msg>
+<arg>${INVALID_PASSWORD_USER}</arg>
+<status status="FAIL" start="2024-12-05T15:56:18.534730" elapsed="0.000833">No keyword with name 'Test Multiple Invalid Login Scenarios' found.</status>
+</kw>
+<kw name="Test Multiple Invalid Login Scenarios">
+<msg time="2024-12-05T15:56:18.540780" level="FAIL">No keyword with name 'Test Multiple Invalid Login Scenarios' found.</msg>
+<arg>${BLANK_CREDENTIALS_USER}</arg>
+<status status="FAIL" start="2024-12-05T15:56:18.540407" elapsed="0.000753">No keyword with name 'Test Multiple Invalid Login Scenarios' found.</status>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-12-05T15:56:18.545896" elapsed="2.771145"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:56:18.544865" elapsed="2.772599"/>
+</kw>
+<status status="FAIL" start="2024-12-05T15:56:13.688285" elapsed="7.630134">Several failures occurred:
+
+1) No keyword with name 'Test Multiple Invalid Login Scenarios' found.
+
+2) No keyword with name 'Test Multiple Invalid Login Scenarios' found.
+
+3) No keyword with name 'Test Multiple Invalid Login Scenarios' found.</status>
+</test>
+<test id="s1-t4" name="Should be abel to add new Customer" line="35">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-12-05T15:56:21.324640" elapsed="0.000645"/>
+</kw>
+<kw name="Set Log Level" owner="BuiltIn">
+<msg time="2024-12-05T15:56:21.326372" level="DEBUG">Log level changed from INFO to DEBUG.</msg>
+<arg>Debug</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:56:21.325783" elapsed="0.000866"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:56:21.327887" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-05T15:56:21.329650" level="DEBUG">Selenium Manager binary found at: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-12-05T15:56:21.330024" level="DEBUG">Executing process: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json</msg>
+<msg time="2024-12-05T15:56:22.633643" level="DEBUG">Found chromedriver 130.0.6723.69 in PATH: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:56:22.634052" level="DEBUG">chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:56:22.634363" level="DEBUG">Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value</msg>
+<msg time="2024-12-05T15:56:22.634771" level="DEBUG">Output: "\r\r\n\r\r\nVersion=131.0.6778.86\r\r\n\r\r\n\r\r\n\r"</msg>
+<msg time="2024-12-05T15:56:22.635526" level="DEBUG">Detected browser: chrome 131.0.6778.86</msg>
+<msg time="2024-12-05T15:56:22.635952" level="DEBUG">Required driver: chromedriver 131.0.6778.87</msg>
+<msg time="2024-12-05T15:56:22.636220" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:56:22.639117" level="DEBUG">Driver path: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:56:22.639533" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:56:22.648736" level="DEBUG">Started executable: `C:\bin\chromedriver.exe` in a child process with pid: 41628 using 0 to output -3</msg>
+<msg time="2024-12-05T15:56:23.163151" level="DEBUG">POST http://localhost:56119/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2024-12-05T15:56:23.163962" level="DEBUG">Starting new HTTP connection (1): localhost:56119</msg>
+<msg time="2024-12-05T15:56:24.478598" level="DEBUG">http://localhost:56119 "POST /session HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:24.479071" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"131.0.6778.86","chrome":{"chromedriverVersion":"130.0.6723.69 (3ec172b971b9478c515a58f591112c5c23fa4965-refs/branch-heads/6723@{#1452})","userDataDir":"C:\\Users\\abdoa\\AppData\\Local\\Temp\\scoped_dir41628_1627622980"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:56124"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"358072062f4fc59114bb93e3fee4110b"}} | headers=HTTPHeaderDict({'Content-Length': '882', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:24.479459" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:24.479882" level="DEBUG">POST http://localhost:56119/session/358072062f4fc59114bb93e3fee4110b/timeouts {'script': 10000}</msg>
+<msg time="2024-12-05T15:56:24.495593" level="DEBUG">http://localhost:56119 "POST /session/358072062f4fc59114bb93e3fee4110b/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:24.496080" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:24.496436" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:24.496810" level="DEBUG">POST http://localhost:56119/session/358072062f4fc59114bb93e3fee4110b/timeouts {'implicit': 0}</msg>
+<msg time="2024-12-05T15:56:24.535599" level="DEBUG">http://localhost:56119 "POST /session/358072062f4fc59114bb93e3fee4110b/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:24.536980" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:24.537477" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:24.537869" level="DEBUG">POST http://localhost:56119/session/358072062f4fc59114bb93e3fee4110b/timeouts {'pageLoad': 300000}</msg>
+<msg time="2024-12-05T15:56:24.545868" level="DEBUG">http://localhost:56119 "POST /session/358072062f4fc59114bb93e3fee4110b/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:24.546326" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:24.546631" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:24.546965" level="DEBUG">POST http://localhost:56119/session/358072062f4fc59114bb93e3fee4110b/url {'url': 'https://www.saucedemo.com'}</msg>
+<msg time="2024-12-05T15:56:24.860629" level="DEBUG">http://localhost:56119 "POST /session/358072062f4fc59114bb93e3fee4110b/url HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:24.861074" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:24.861402" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:24.861633" level="DEBUG">Opened browser with session id 358072062f4fc59114bb93e3fee4110b.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-05T15:56:21.327195" elapsed="3.534717"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:56:24.863445" level="DEBUG">POST http://localhost:56119/session/358072062f4fc59114bb93e3fee4110b/window/rect {'x': None, 'y': None, 'width': 1935, 'height': 1090}</msg>
+<msg time="2024-12-05T15:56:25.988476" level="DEBUG">http://localhost:56119 "POST /session/358072062f4fc59114bb93e3fee4110b/window/rect HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:25.988786" level="DEBUG">Remote response: status=200 | data={"value":{"height":883,"width":1555,"x":8,"y":8}} | headers=HTTPHeaderDict({'Content-Length': '49', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:25.988996" level="DEBUG">Finished Request</msg>
+<arg>width=1935</arg>
+<arg>height=1090</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-12-05T15:56:24.862481" elapsed="1.126699"/>
+</kw>
+<kw name="Set Log Level" owner="BuiltIn">
+<arg>info</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:56:25.989525" elapsed="0.000469"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:56:21.323771" elapsed="4.666500"/>
 </kw>
 <kw name="Login With Valid Credentials" owner="SwagApp">
 <kw name="Verify Page Loaded" owner="SignIn">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:10.875841" elapsed="0.030411"/>
+<status status="PASS" start="2024-12-05T15:56:25.993506" elapsed="0.023806"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:10.874370" elapsed="0.032436"/>
+<status status="PASS" start="2024-12-05T15:56:25.992589" elapsed="0.025054"/>
 </kw>
 <kw name="Login With Valid Credentials" owner="SignIn">
 <kw name="Fill Username Field" owner="SignIn">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:10.911590" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2024-12-05T15:56:26.020267" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>${SIGNIN_USERNAME_TEXTBOX}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:10.910359" elapsed="0.177330"/>
+<status status="PASS" start="2024-12-05T15:56:26.019823" elapsed="0.191927"/>
 </kw>
-<arg>${USERNAME}</arg>
-<status status="PASS" start="2024-11-17T01:00:10.909061" elapsed="0.179173"/>
+<arg>${UserData.Username}</arg>
+<status status="PASS" start="2024-12-05T15:56:26.018629" elapsed="0.193564"/>
 </kw>
 <kw name="Fill Password Field" owner="SignIn">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:11.090134" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2024-12-05T15:56:26.215242" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
 <arg>${SIGNIN_PASSWORD_TEXTBOX}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:11.089771" elapsed="0.110750"/>
+<status status="PASS" start="2024-12-05T15:56:26.214686" elapsed="0.161826"/>
 </kw>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-17T01:00:11.089117" elapsed="0.111817"/>
+<arg>${UserData.Password}</arg>
+<status status="PASS" start="2024-12-05T15:56:26.212718" elapsed="0.164245"/>
 </kw>
 <kw name="Click &quot;Login&quot; Button" owner="SignIn">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:11.202119" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2024-12-05T15:56:26.378784" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>${SIGNIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:11.201712" elapsed="0.114852"/>
+<status status="PASS" start="2024-12-05T15:56:26.378264" elapsed="0.183088"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:11.201241" elapsed="0.115638"/>
+<status status="PASS" start="2024-12-05T15:56:26.377494" elapsed="0.184406"/>
 </kw>
-<arg>${EMAIL}</arg>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-17T01:00:10.907612" elapsed="0.409473"/>
+<arg>${UserData}</arg>
+<status status="PASS" start="2024-12-05T15:56:26.018028" elapsed="0.544190"/>
+</kw>
+<kw name="Do Some Custom Thing" owner="SignIn">
+<kw name="Do Something Special" owner="MyCustomeLibrary">
+<msg time="2024-12-05T15:56:26.563991" level="INFO">Do Something Special</msg>
+<status status="PASS" start="2024-12-05T15:56:26.563538" elapsed="0.000912"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:56:26.562756" elapsed="0.002001"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Products">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${PRODUCTS_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:11.318257" elapsed="0.025075"/>
+<status status="PASS" start="2024-12-05T15:56:26.567286" elapsed="0.030221"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:11.317589" elapsed="0.026113"/>
+<status status="PASS" start="2024-12-05T15:56:26.565483" elapsed="0.032441"/>
 </kw>
-<arg>${VALID_LOGIN_USERNAME}</arg>
-<arg>${VALID_LOGIN_PASSWORD}</arg>
-<status status="PASS" start="2024-11-17T01:00:10.871965" elapsed="0.471984"/>
+<return>
+<value>Logged in!</value>
+<status status="PASS" start="2024-12-05T15:56:26.598145" elapsed="0.000196"/>
+</return>
+<arg>${ADMIN_USER}</arg>
+<status status="PASS" start="2024-12-05T15:56:25.991442" elapsed="0.607119"/>
 </kw>
 <kw name="Add Products To Cart" owner="SwagApp">
 <kw name="Add To cart" owner="Products">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:11.346786" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bike-light'.</msg>
+<msg time="2024-12-05T15:56:26.602998" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bike-light'.</msg>
 <arg>${ADD_TO_CART_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:11.346353" elapsed="0.077291"/>
+<status status="PASS" start="2024-12-05T15:56:26.602486" elapsed="0.115539"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:11.345576" elapsed="0.078412"/>
+<status status="PASS" start="2024-12-05T15:56:26.601732" elapsed="0.116624"/>
 </kw>
 <kw name="Click &quot;Shopping Cart&quot; Container" owner="TopNav">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:11.424889" level="INFO">Clicking link 'css=#shopping_cart_container a.shopping_cart_link'.</msg>
+<msg time="2024-12-05T15:56:26.719624" level="INFO">Clicking link 'css=#shopping_cart_container a.shopping_cart_link'.</msg>
 <arg>${SHOPPING_CART_CONTAINER}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:11.424595" elapsed="0.054459"/>
+<status status="PASS" start="2024-12-05T15:56:26.719217" elapsed="0.095225"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:11.424247" elapsed="0.055053"/>
+<status status="PASS" start="2024-12-05T15:56:26.718706" elapsed="0.096172"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Cart">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${YOUR_CART_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:11.479935" elapsed="0.014075"/>
+<status status="PASS" start="2024-12-05T15:56:26.816342" elapsed="0.022457"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:11.479562" elapsed="0.014657"/>
+<status status="PASS" start="2024-12-05T15:56:26.815445" elapsed="0.023787"/>
 </kw>
 <kw name="Checkout" owner="Cart">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:11.495061" level="INFO">Clicking button 'id=checkout'.</msg>
+<msg time="2024-12-05T15:56:26.840991" level="INFO">Clicking button 'id=checkout'.</msg>
 <arg>${CHECKOUT_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:11.494798" elapsed="0.078519"/>
+<status status="PASS" start="2024-12-05T15:56:26.840440" elapsed="0.145312"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:11.494460" elapsed="0.079166"/>
+<status status="PASS" start="2024-12-05T15:56:26.839731" elapsed="0.146590"/>
 </kw>
 <kw name="Verify Page Loaded" owner="CheckoutInfo">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${CHECKOUT_INFO_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:11.574477" elapsed="0.015190"/>
+<status status="PASS" start="2024-12-05T15:56:26.989121" elapsed="0.030284"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:11.573972" elapsed="0.016018"/>
+<status status="PASS" start="2024-12-05T15:56:26.987189" elapsed="0.032589"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:11.344714" elapsed="0.245498"/>
+<status status="PASS" start="2024-12-05T15:56:26.600827" elapsed="0.419190"/>
 </kw>
 <kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-17T01:00:11.591631" elapsed="6.258836"/>
+<status status="PASS" start="2024-12-05T15:56:27.021919" elapsed="2.268410"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:11.590962" elapsed="6.259772"/>
+<status status="PASS" start="2024-12-05T15:56:27.020994" elapsed="2.269753"/>
 </kw>
 <doc>Test adding new customer</doc>
 <tag>1004</tag>
 <tag>Customers</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2024-11-17T01:00:07.991055" elapsed="9.860032"/>
+<status status="PASS" start="2024-12-05T15:56:21.322508" elapsed="7.968763"/>
 </test>
-<test id="s1-t3" name="Should be abel to checkout" line="31">
+<test id="s1-t5" name="Should be abel to checkout" line="41">
 <kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-17T01:00:17.853926" elapsed="0.000529"/>
+<status status="PASS" start="2024-12-05T15:56:29.294670" elapsed="0.000430"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-17T01:00:17.855227" level="INFO">Starting the test case</msg>
-<arg>Starting the test case</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-17T01:00:17.854868" elapsed="0.000641"/>
+<kw name="Set Log Level" owner="BuiltIn">
+<msg time="2024-12-05T15:56:29.295983" level="DEBUG">Log level changed from INFO to DEBUG.</msg>
+<arg>Debug</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:56:29.295445" elapsed="0.000806"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:17.856403" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
-<msg time="2024-11-17T01:00:18.327666" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:56:29.297304" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-12-05T15:56:29.299167" level="DEBUG">Selenium Manager binary found at: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-12-05T15:56:29.299579" level="DEBUG">Executing process: C:\Users\abdoa\installer\Python\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json</msg>
+<msg time="2024-12-05T15:56:29.910571" level="DEBUG">Found chromedriver 130.0.6723.69 in PATH: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:56:29.910938" level="DEBUG">chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:56:29.911215" level="DEBUG">Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value</msg>
+<msg time="2024-12-05T15:56:29.911454" level="DEBUG">Output: "\r\r\n\r\r\nVersion=131.0.6778.86\r\r\n\r\r\n\r\r\n\r"</msg>
+<msg time="2024-12-05T15:56:29.911632" level="DEBUG">Detected browser: chrome 131.0.6778.86</msg>
+<msg time="2024-12-05T15:56:29.911808" level="DEBUG">Required driver: chromedriver 131.0.6778.87</msg>
+<msg time="2024-12-05T15:56:29.911969" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:56:29.914318" level="DEBUG">Driver path: C:\bin\chromedriver.exe</msg>
+<msg time="2024-12-05T15:56:29.914718" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-12-05T15:56:29.924020" level="DEBUG">Started executable: `C:\bin\chromedriver.exe` in a child process with pid: 10892 using 0 to output -3</msg>
+<msg time="2024-12-05T15:56:30.431756" level="DEBUG">POST http://localhost:56147/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2024-12-05T15:56:39.276668" level="DEBUG">Starting new HTTP connection (1): localhost:56147</msg>
+<msg time="2024-12-05T15:56:40.281729" level="DEBUG">http://localhost:56147 "POST /session HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:40.282234" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"131.0.6778.86","chrome":{"chromedriverVersion":"130.0.6723.69 (3ec172b971b9478c515a58f591112c5c23fa4965-refs/branch-heads/6723@{#1452})","userDataDir":"C:\\Users\\abdoa\\AppData\\Local\\Temp\\scoped_dir10892_823683371"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:56162"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"4773c763e91bd40cc6062d5cb4dc30e9"}} | headers=HTTPHeaderDict({'Content-Length': '881', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:40.282857" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:40.283546" level="DEBUG">POST http://localhost:56147/session/4773c763e91bd40cc6062d5cb4dc30e9/timeouts {'script': 10000}</msg>
+<msg time="2024-12-05T15:56:40.286471" level="DEBUG">http://localhost:56147 "POST /session/4773c763e91bd40cc6062d5cb4dc30e9/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:40.286988" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:40.287490" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:40.287952" level="DEBUG">POST http://localhost:56147/session/4773c763e91bd40cc6062d5cb4dc30e9/timeouts {'implicit': 0}</msg>
+<msg time="2024-12-05T15:56:40.290590" level="DEBUG">http://localhost:56147 "POST /session/4773c763e91bd40cc6062d5cb4dc30e9/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:40.291095" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:40.291476" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:40.291895" level="DEBUG">POST http://localhost:56147/session/4773c763e91bd40cc6062d5cb4dc30e9/timeouts {'pageLoad': 300000}</msg>
+<msg time="2024-12-05T15:56:40.294164" level="DEBUG">http://localhost:56147 "POST /session/4773c763e91bd40cc6062d5cb4dc30e9/timeouts HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:40.294667" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:40.295053" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:40.295497" level="DEBUG">POST http://localhost:56147/session/4773c763e91bd40cc6062d5cb4dc30e9/url {'url': 'https://www.saucedemo.com'}</msg>
+<msg time="2024-12-05T15:56:41.308699" level="DEBUG">http://localhost:56147 "POST /session/4773c763e91bd40cc6062d5cb4dc30e9/url HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:41.309152" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:41.309483" level="DEBUG">Finished Request</msg>
+<msg time="2024-12-05T15:56:41.309700" level="DEBUG">Opened browser with session id 4773c763e91bd40cc6062d5cb4dc30e9.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-17T01:00:17.855906" elapsed="3.037753"/>
+<status status="PASS" start="2024-12-05T15:56:29.296748" elapsed="12.013186"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
+<msg time="2024-12-05T15:56:41.311168" level="DEBUG">POST http://localhost:56147/session/4773c763e91bd40cc6062d5cb4dc30e9/window/rect {'x': None, 'y': None, 'width': 1935, 'height': 1090}</msg>
+<msg time="2024-12-05T15:56:41.711870" level="DEBUG">http://localhost:56147 "POST /session/4773c763e91bd40cc6062d5cb4dc30e9/window/rect HTTP/11" 200 0</msg>
+<msg time="2024-12-05T15:56:41.712360" level="DEBUG">Remote response: status=200 | data={"value":{"height":883,"width":1555,"x":8,"y":8}} | headers=HTTPHeaderDict({'Content-Length': '49', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-12-05T15:56:41.712724" level="DEBUG">Finished Request</msg>
 <arg>width=1935</arg>
 <arg>height=1090</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2024-11-17T01:00:20.894171" elapsed="0.369327"/>
+<status status="PASS" start="2024-12-05T15:56:41.310466" elapsed="0.402589"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:17.853173" elapsed="3.410550"/>
+<kw name="Set Log Level" owner="BuiltIn">
+<arg>info</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-12-05T15:56:41.713622" elapsed="0.000806"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:56:29.293983" elapsed="12.420807"/>
 </kw>
 <kw name="Login With Valid Credentials" owner="SwagApp">
 <kw name="Verify Page Loaded" owner="SignIn">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.265524" elapsed="0.014521"/>
+<status status="PASS" start="2024-12-05T15:56:41.717705" elapsed="0.026595"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.264924" elapsed="0.015335"/>
+<status status="PASS" start="2024-12-05T15:56:41.716842" elapsed="0.027843"/>
 </kw>
 <kw name="Login With Valid Credentials" owner="SignIn">
 <kw name="Fill Username Field" owner="SignIn">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:21.281638" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2024-12-05T15:56:41.749788" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>${SIGNIN_USERNAME_TEXTBOX}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.281341" elapsed="0.133105"/>
+<status status="PASS" start="2024-12-05T15:56:41.749000" elapsed="0.235297"/>
 </kw>
-<arg>${USERNAME}</arg>
-<status status="PASS" start="2024-11-17T01:00:21.280971" elapsed="0.133695"/>
+<arg>${UserData.Username}</arg>
+<status status="PASS" start="2024-12-05T15:56:41.746435" elapsed="0.238274"/>
 </kw>
 <kw name="Fill Password Field" owner="SignIn">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:21.415574" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2024-12-05T15:56:41.987769" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
 <arg>${SIGNIN_PASSWORD_TEXTBOX}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.415288" elapsed="0.095790"/>
+<status status="PASS" start="2024-12-05T15:56:41.987050" elapsed="0.168353"/>
 </kw>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-17T01:00:21.414905" elapsed="0.096406"/>
+<arg>${UserData.Password}</arg>
+<status status="PASS" start="2024-12-05T15:56:41.985206" elapsed="0.170499"/>
 </kw>
 <kw name="Click &quot;Login&quot; Button" owner="SignIn">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:21.512165" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2024-12-05T15:56:42.156940" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>${SIGNIN_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.511891" elapsed="0.109488"/>
+<status status="PASS" start="2024-12-05T15:56:42.156558" elapsed="0.156665"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.511555" elapsed="0.110102"/>
+<status status="PASS" start="2024-12-05T15:56:42.156051" elapsed="0.157646"/>
 </kw>
-<arg>${EMAIL}</arg>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-17T01:00:21.280511" elapsed="0.341334"/>
+<arg>${UserData}</arg>
+<status status="PASS" start="2024-12-05T15:56:41.745228" elapsed="0.568913"/>
+</kw>
+<kw name="Do Some Custom Thing" owner="SignIn">
+<kw name="Do Something Special" owner="MyCustomeLibrary">
+<msg time="2024-12-05T15:56:42.316003" level="INFO">Do Something Special</msg>
+<status status="PASS" start="2024-12-05T15:56:42.315582" elapsed="0.000776"/>
+</kw>
+<status status="PASS" start="2024-12-05T15:56:42.314741" elapsed="0.001953"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Products">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${PRODUCTS_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.622960" elapsed="0.022753"/>
+<status status="PASS" start="2024-12-05T15:56:42.317915" elapsed="0.036407"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.622166" elapsed="0.023943"/>
+<status status="PASS" start="2024-12-05T15:56:42.317211" elapsed="0.037566"/>
 </kw>
-<arg>${VALID_LOGIN_USERNAME}</arg>
-<arg>${VALID_LOGIN_PASSWORD}</arg>
-<status status="PASS" start="2024-11-17T01:00:21.264224" elapsed="0.382177"/>
+<return>
+<value>Logged in!</value>
+<status status="PASS" start="2024-12-05T15:56:42.355073" elapsed="0.000257"/>
+</return>
+<arg>${ADMIN_USER}</arg>
+<status status="PASS" start="2024-12-05T15:56:41.715762" elapsed="0.639924"/>
 </kw>
 <kw name="Add Products To Cart" owner="SwagApp">
 <kw name="Add To cart" owner="Products">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:21.649313" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bike-light'.</msg>
+<msg time="2024-12-05T15:56:42.359376" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bike-light'.</msg>
 <arg>${ADD_TO_CART_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.648805" elapsed="0.095885"/>
+<status status="PASS" start="2024-12-05T15:56:42.358668" elapsed="0.117304"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.648108" elapsed="0.096855"/>
+<status status="PASS" start="2024-12-05T15:56:42.357843" elapsed="0.118562"/>
 </kw>
 <kw name="Click &quot;Shopping Cart&quot; Container" owner="TopNav">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:21.746215" level="INFO">Clicking link 'css=#shopping_cart_container a.shopping_cart_link'.</msg>
+<msg time="2024-12-05T15:56:42.478389" level="INFO">Clicking link 'css=#shopping_cart_container a.shopping_cart_link'.</msg>
 <arg>${SHOPPING_CART_CONTAINER}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.745741" elapsed="0.068872"/>
+<status status="PASS" start="2024-12-05T15:56:42.477743" elapsed="0.103331"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.745238" elapsed="0.069623"/>
+<status status="PASS" start="2024-12-05T15:56:42.476946" elapsed="0.104698"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Cart">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${YOUR_CART_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.815638" elapsed="0.014412"/>
+<status status="PASS" start="2024-12-05T15:56:42.582939" elapsed="0.029137"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.815150" elapsed="0.015106"/>
+<status status="PASS" start="2024-12-05T15:56:42.582174" elapsed="0.030488"/>
 </kw>
 <kw name="Checkout" owner="Cart">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:21.831047" level="INFO">Clicking button 'id=checkout'.</msg>
+<msg time="2024-12-05T15:56:42.614720" level="INFO">Clicking button 'id=checkout'.</msg>
 <arg>${CHECKOUT_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.830804" elapsed="0.071072"/>
+<status status="PASS" start="2024-12-05T15:56:42.614111" elapsed="0.122723"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.830488" elapsed="0.071720"/>
+<status status="PASS" start="2024-12-05T15:56:42.613252" elapsed="0.124013"/>
 </kw>
 <kw name="Verify Page Loaded" owner="CheckoutInfo">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${CHECKOUT_INFO_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.903466" elapsed="0.014197"/>
+<status status="PASS" start="2024-12-05T15:56:42.738699" elapsed="0.022997"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.902732" elapsed="0.015136"/>
+<status status="PASS" start="2024-12-05T15:56:42.737828" elapsed="0.024190"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.647292" elapsed="0.270706"/>
+<status status="PASS" start="2024-12-05T15:56:42.356901" elapsed="0.405570"/>
 </kw>
 <kw name="Checkout" owner="SwagApp">
 <kw name="Fill Customer Fields" owner="CheckoutInfo">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:21.920548" level="INFO">Typing text 'Alaa' into text field 'id=first-name'.</msg>
+<msg time="2024-12-05T15:56:42.766919" level="INFO">Typing text 'Alaa' into text field 'id=first-name'.</msg>
 <arg>${FIRST_NAME_TEXTBOX}</arg>
 <arg>${CUSTOMER_FIRSTNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:21.920182" elapsed="0.158684"/>
+<status status="PASS" start="2024-12-05T15:56:42.766156" elapsed="0.220608"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:22.079974" level="INFO">Typing text 'Abdo' into text field 'id=last-name'.</msg>
+<msg time="2024-12-05T15:56:42.988008" level="INFO">Typing text 'Abdo' into text field 'id=last-name'.</msg>
 <arg>${LAST_NAME_TEXTBOX}</arg>
 <arg>${CUSTOMER_LASTNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:22.079358" elapsed="0.103667"/>
+<status status="PASS" start="2024-12-05T15:56:42.987341" elapsed="0.130217"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:22.183692" level="INFO">Typing text '00962' into text field 'id=postal-code'.</msg>
+<msg time="2024-12-05T15:56:43.118985" level="INFO">Typing text '00962' into text field 'id=postal-code'.</msg>
 <arg>${POSTAL_CODE_TEXTBOX}</arg>
 <arg>${CUSTOMER_POSTAL_CODE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:22.183333" elapsed="0.088815"/>
+<status status="PASS" start="2024-12-05T15:56:43.118160" elapsed="0.137197"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.919666" elapsed="0.352811"/>
+<status status="PASS" start="2024-12-05T15:56:42.765240" elapsed="0.490592"/>
 </kw>
 <kw name="Click &quot;Continue&quot; Button" owner="CheckoutInfo">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:22.273971" level="INFO">Clicking button 'id=continue'.</msg>
+<msg time="2024-12-05T15:56:43.257973" level="INFO">Clicking button 'id=continue'.</msg>
 <arg>${CONTINUE_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:22.273515" elapsed="0.065461"/>
+<status status="PASS" start="2024-12-05T15:56:43.257365" elapsed="0.113591"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:22.272859" elapsed="0.066403"/>
+<status status="PASS" start="2024-12-05T15:56:43.256519" elapsed="0.114886"/>
 </kw>
 <kw name="Verify Page Loaded" owner="CheckoutOverview">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${CHECKOUT_OVERVIEW_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:22.340199" elapsed="0.013707"/>
+<status status="PASS" start="2024-12-05T15:56:43.372840" elapsed="0.026108"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:22.339740" elapsed="0.014379"/>
+<status status="PASS" start="2024-12-05T15:56:43.371976" elapsed="0.027422"/>
 </kw>
 <kw name="Click Finish Button" owner="CheckoutOverview">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T01:00:22.354983" level="INFO">Clicking button 'id=finish'.</msg>
+<msg time="2024-12-05T15:56:43.401001" level="INFO">Clicking button 'id=finish'.</msg>
 <arg>${FINISH_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T01:00:22.354713" elapsed="0.057613"/>
+<status status="PASS" start="2024-12-05T15:56:43.400489" elapsed="0.102908"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:22.354370" elapsed="0.058195"/>
+<status status="PASS" start="2024-12-05T15:56:43.399873" elapsed="0.103933"/>
 </kw>
 <kw name="Verify Page Loaded" owner="CompleteCheckout">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${CHECKOUT_COMPLETED_HEADER_LABEL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-17T01:00:22.413166" elapsed="0.014939"/>
+<status status="PASS" start="2024-12-05T15:56:43.504911" elapsed="0.029021"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:22.412813" elapsed="0.015543"/>
+<status status="PASS" start="2024-12-05T15:56:43.504196" elapsed="0.030178"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:21.918807" elapsed="0.509703"/>
+<status status="PASS" start="2024-12-05T15:56:42.764234" elapsed="0.770455"/>
 </kw>
 <kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-17T01:00:22.430025" elapsed="6.271998"/>
+<status status="PASS" start="2024-12-05T15:56:43.536730" elapsed="2.306278"/>
 </kw>
-<status status="PASS" start="2024-11-17T01:00:22.429298" elapsed="6.273285"/>
+<status status="PASS" start="2024-12-05T15:56:43.535754" elapsed="2.307600"/>
 </kw>
 <doc>Test the log out</doc>
 <tag>1006</tag>
 <tag>Logout</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2024-11-17T01:00:17.852191" elapsed="10.851117"/>
+<status status="PASS" start="2024-12-05T15:56:29.292761" elapsed="16.551057"/>
 </test>
 <doc>This is some basic info about whole suite</doc>
-<status status="PASS" start="2024-11-17T00:59:57.753181" elapsed="30.952745"/>
+<status status="FAIL" start="2024-12-05T15:55:46.124007" elapsed="59.722872"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">1002</stat>
@@ -468,12 +1111,23 @@
 <stat pass="3" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Swag">Swag</stat>
+<stat pass="4" fail="1" skip="0" id="s1" name="Swag">Swag</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-17T00:59:58.607459" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-17T01:00:08.460722" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-17T01:00:18.327666" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.69); currently, chromedriver 131.0.6778.69 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:55:46.838794" level="WARN">Error in file 'd:\development1\robot-scripts\swag-advance\Resources\SwagApp.robot' on line 20: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-12-05T15:55:46.843294" level="WARN">Error in file 'd:\development1\robot-scripts\swag-advance\Resources\PO\SignIn.robot' on line 39: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-12-05T15:55:46.863580" level="WARN">Error in file 'd:\development1\robot-scripts\swag-advance\Resources\DataManager.robot' on line 12: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-12-05T15:55:49.701863" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:55:53.717973" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-12-05T15:55:54.206894" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-12-05T15:55:55.534709" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-12-05T15:55:55.694140" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-12-05T15:55:56.931989" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-12-05T15:55:56.935456" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-12-05T15:56:01.244235" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:56:14.444049" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:56:22.636220" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-12-05T15:56:29.911969" level="WARN">The chromedriver version (130.0.6723.69) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (131.0.6778.86); currently, chromedriver 131.0.6778.87 is recommended for chrome 131.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
